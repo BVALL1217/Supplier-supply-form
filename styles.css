@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+#supplyForm {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+label, h4 {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"] {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.checkbox-container label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+.data-matrix {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.data-matrix th, .data-matrix td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+.data-matrix th {
+    background-color: #f0f0f0;
+}
+.data-matrix input[type="number"] {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+#generateMatrixBtn, button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+#generateMatrixBtn:hover, button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

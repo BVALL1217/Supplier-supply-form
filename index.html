@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dynamic Supply Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="supplyForm">
+        <h1>📝 Supply Specification Form</h1>
+
+        <!-- Section 1: Required Identification -->
+        <section class="form-section">
+            <h2>1. Required Identification</h2>
+            <label for="providerName">Supplier Company Name:</label>
+            <input type="text" id="providerName" name="providerName" required>
+
+            <label for="providerEmail">Supplier Email:</label>
+            <input type="email" id="providerEmail" name="providerEmail" required>
+        </section>
+
+        <hr>
+
+        <!-- Section 2: Supply Specification -->
+        <section class="form-section">
+            <h2>2. Supply Specification</h2>
+
+            <!-- A. Variable Definition (Selection Options) -->
+            <h3>A. Variable Definition</h3>
+
+            <div class="selection-group">
+                <h4>Resin (Multi-select)</h4>
+                <div id="resinaOptions" class="checkbox-container">
+                    <label><input type="checkbox" name="resina" value="HDPE"> HDPE</label>
+                    <label><input type="checkbox" name="resina" value="LDPE"> LDPE</label>
+                    <label><input type="checkbox" name="resina" value="LLDPE"> LLDPE</label>
+                    <label><input type="checkbox" name="resina" value="PET"> PET</label>
+                    <label><input type="checkbox" name="resina" value="PP"> PP</label>
+                    <label><input type="checkbox" name="resina" value="PS"> PS</label>
+                    <label><input type="checkbox" name="resina" value="PVC"> PVC</label>
+                </div>
+            </div>
+
+            <div class="selection-group">
+                <h4>Location (Multi-select)</h4>
+                <div id="locationOptions" class="checkbox-container">
+                    <label><input type="checkbox" name="location" value="CoMan"> CoMan</label>
+                    <label><input type="checkbox" name="location" value="CoPack"> CoPack</label>
+                    <label><input type="checkbox" name="location" value="HSY Plant"> HSY Plant</label>
+                </div>
+            </div>
+            
+            <button type="button" id="generateMatrixBtn">Generate Input Matrix</button>
+            <p id="matrixMessage"></p>
+        </section>
+
+        <hr>
+
+        <!-- B. Critical Interface Requirement (Dynamic Input Matrix) -->
+        <section class="form-section">
+            <h2>B. Dynamic Input Matrix</h2>
+            <table id="dynamicMatrix" class="data-matrix">
+                <thead>
+                    <tr>
+                        <th>Resin</th>
+                        <th>Location</th>
+                        <th>Quantity (Lbs) CMG Business Unit</th>
+                        <th>Quantity (Lbs) Salty Business Unit</th>
+                    </tr>
+                </thead>
+                <tbody id="matrixBody">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Submission Button -->
+        <button type="submit">Submit Form and Send Data</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
