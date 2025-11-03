@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #3F000B;
     padding: 20px;
 }
 #supplyForm {
@@ -10,6 +10,12 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#supplyForm h1 {
+    text-align: center; /* 2. New: Center the main title */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff; /* Optional: Make the title color match the buttons */
 }
 .form-section {
     margin-bottom: 20px;
@@ -69,3 +75,4 @@ button[type="submit"]:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
